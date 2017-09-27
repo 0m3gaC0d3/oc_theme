@@ -1,0 +1,26 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+    <div id="breadcrumb">
+        <div class="card-inverse card-block bg-inverse">
+            <v:page.breadCrumb as="rootLine">
+                <nav class="breadcrumbs">
+                    <f:for each="{rootLine}" as="rootPage" iteration="rootLineIterator">
+                        <f:comment><!-- Ignore root --></f:comment>
+                        <f:if condition="{rootPage.uid} > 1">
+                            <f:if condition="{rootLineIterator.isLast}">
+                                <f:then>
+                                    {rootPage.title}
+                                </f:then>
+                                <f:else>
+                                    <a href="{rootPage.link}" class="{rootPage.class}">{rootPage.title}</a>
+                                    <span class="breadcrump-sperator"> > </span>
+                                </f:else>
+                            </f:if>
+                        </f:if>
+                    </f:for>
+                </nav>
+            </v:page.breadCrumb>
+        </div>
+    </div>
+</html>
+</html>

@@ -1,0 +1,23 @@
+<html xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+    <v:page.header.title title="{data.title} | Development" />
+    <v:page.header.meta name="description" content="{data.description}" />
+    <v:page.header.meta name="viewport" content="width=device-width,initial-scale=1" />
+    <v:page.header.meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+    <v:page.header.meta name="author" content="{data.author}" />
+    <v:page.header content='
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="theme-color" content="#ffffff">
+    ' />
+    <v:asset.style path="EXT:oc_theme/Resources/Public/Vendor/bootstrap/dist/css/bootstrap.min.css" name="css_bootstrap" />
+    <v:asset.style path="EXT:oc_theme/Resources/Public/Vendor/font-awesome/css/font-awesome.min.css"  name="css_font_awesome" />
+    <v:asset.style path="EXT:oc_theme/Resources/Public/Vendor/fancybox/dist/jquery.fancybox.min.css" name="css_fancybox" />
+    <v:asset.style path="EXT:oc_theme/Resources/Public/StyleSheet/theme.css" name="css_theme" dependencies="css_bootstrap" />
+    <v:asset.script path="EXT:oc_theme/Resources/Public/Vendor/jquery/dist/jquery.slim.js" name="js_jquery" />
+    <v:asset.script path="EXT:oc_theme/Resources/Public/Vendor/tether/dist/js/tether.min.js" name="js_tether" dependencies="js_jquery" />
+    <v:asset.script path="EXT:oc_theme/Resources/Public/Vendor/bootstrap/dist/js/bootstrap.min.js"  name="js_bootstrap" dependencies="js_jquery,js_tether" />
+    <v:asset.script path="EXT:oc_theme/Resources/Public/Vendor/fancybox/dist/jquery.fancybox.min.js" name="js_fancybox" dependencies="js_jquery" />
+</html>

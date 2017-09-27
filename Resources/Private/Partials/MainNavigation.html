@@ -1,0 +1,28 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+      xmlns:v="http://typo3.org/ns/FluidTYPO3/Vhs/ViewHelpers">
+<div id="navigation-main">
+    <nav class="navbar navbar-toggleable-md navbar-light bg-faded navbar-inverse bg-inverse">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand" href="/">Omega Code</a>
+            <v:page.menu as="items" levels="4">
+                <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                    <f:for each="{items}" as="item" iteration="menuIterator">
+                        <li class="nav-item">
+                            <f:link.page pageUid="{item.uid}" class="nav-link {item.class}">
+                                {item.linktext}
+                            </f:link.page>
+                            <f:if condition="{item.hasSubPages}">
+                                <v:page.menu pageUid="{item.uid}" class="navbar-nav navbar-sub" />
+                            </f:if>
+                        </li>
+                    </f:for>
+                </ul>
+            </v:page.menu>
+            <v:page.languageMenu layout="flag" class="nav navbar-nav language-menu pull-right" hideNotTranslated="0" />
+        </div>
+    </nav>
+</div>
+</html>

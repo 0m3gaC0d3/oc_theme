@@ -1,0 +1,12 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <div id="header">
+        <header>
+            <f:comment><!-- Main navigation --></f:comment>
+            <f:render partial="MainNavigation" arguments="{_all}" />
+            <f:comment><!-- Header content --></f:comment>
+            <div id="header-content">
+                <f:format.raw>{content_header}</f:format.raw>
+            </div>
+        </header>
+    </div>
+</html>

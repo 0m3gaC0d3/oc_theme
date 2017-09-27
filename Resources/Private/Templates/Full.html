@@ -1,0 +1,13 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <f:layout name="Full" />
+    <f:section name="Content">
+        <div id="content" class="card card-block">
+            <h1 class="title">{data.title}</h1>
+            <f:if condition="{data.subtitle}">
+                <h2 class="subtitle">{data.subtitle}</h2>
+            </f:if>
+            <f:format.raw>{content_main}</f:format.raw>
+            <div class="clearer"></div>
+        </div>
+    </f:section>
+</html>

@@ -1,0 +1,51 @@
+{
+	"name": "omegacode/typo3-theme",
+	"type": "typo3-cms-extension",
+	"description": "",
+	"homepage": "https://bitbucket.org/omegac0de/oc_theme",
+	"version": "1.0.0",
+	"license": "GPL-3.0+",
+	"keywords": [
+		"TYPO3",
+		"CMS",
+		"theme",
+		"typo3",
+		"distribution"
+	],
+	"replace": {
+		"oc_theme": "self.version",
+		"typo3-ter/oc-theme": "self.version"
+	},
+	"require": {
+		"typo3/cms-core": ">=8.7.0,<8.7.99"
+	},
+	"require-dev": {
+		"phpunit/phpunit": "~4.8.0"
+	},
+	"autoload": {
+		"psr-4": {
+			"OmegaCode\\OcTheme\\": "Classes/"
+		}
+	},
+	"autoload-dev": {
+		"psr-4": {
+			"OmegaCode\\OcTheme\\Tests\\": "Tests/"
+		}
+	},
+	"authors": [
+		{
+			"name": "Wolf Utz",
+			"email": "wpu@hotmail.de"
+		}
+	],
+	"config": {
+		"vendor-dir": ".Build/vendor",
+		"bin-dir": ".Build/bin"
+	},
+	"extra": {
+		"typo3/cms": {
+			"cms-package-dir": "{$vendor-dir}/typo3/cms",
+			"web-dir": ".Build/Web"
+		}
+	}
+}

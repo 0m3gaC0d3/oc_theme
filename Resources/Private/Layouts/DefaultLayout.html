@@ -1,0 +1,14 @@
+{namespace a=OmegaCode\OcTheme\ViewHelpers}
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+    <f:render partial="Head" arguments="{_all}"/>
+    <div id="page-{data.uid}" class="page container layout-{data.layout} {f:if(condition:'{a:page.isNew(newUntil: data.newUntil)}', then: 'new')}">
+        <f:comment><!-- Header --></f:comment>
+        <f:render partial="Header" arguments="{_all}" />
+        <f:comment><!-- Breadcrumb --></f:comment>
+        <f:render partial="Breadcrumb" arguments="{_all}"/>
+        <f:comment><!-- Content --></f:comment>
+        <f:render section="Content" arguments="{_all}"/>
+        <f:comment><!-- Footer --></f:comment>
+        <f:render partial="Footer" arguments="{_all}" />
+    </div>
+</html>

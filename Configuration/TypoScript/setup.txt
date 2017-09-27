@@ -1,0 +1,41 @@
+# Setup page
+page = PAGE
+page.10 = FLUIDTEMPLATE
+page.typeNum = 0
+page.10 {
+    format = html
+    file.cObject = CASE
+    file.cObject {
+        key.data = levelfield:-1, backend_layout_next_level, slide
+        key.override.field = backend_layout
+        1 = TEXT
+        1.value = EXT:oc_theme/Resources/Private/Templates/Default.html
+        2 = TEXT
+        2.value = EXT:oc_theme/Resources/Private/Templates/Full.html
+        3 = TEXT
+        3.value = EXT:oc_theme/Resources/Private/Templates/Sidebar.html
+        default = TEXT
+        default.value = EXT:oc_theme/Resources/Private/Templates/Default.html
+    }
+    partialRootPath = EXT:oc_theme/Resources/Private/Partials/
+    layoutRootPath = EXT:oc_theme/Resources/Private/Layouts/
+    variables {
+        content_header < styles.content.get
+        content_header.select.where = colPos = 0
+        content_header.slide = -1
+        content_main < styles.content.get
+        content_main.select.where = colPos = 1
+        content_footer < styles.content.get
+        content_footer.select.where = colPos = 3
+        content_footer.slide = -1
+        content_sidebar < styles.content.get
+        content_sidebar.select.where = colPos = 4
+    }
+}
+# Configurations.
+config {
+    # Allow debug
+    contentObjectExceptionHandler = {$theme.tx_oc_theme.settings.contentObjectExceptionHandler}
+    # Ignore default page title.
+    noPageTitle = 1
+}

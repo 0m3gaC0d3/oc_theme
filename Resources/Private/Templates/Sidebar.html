@@ -1,0 +1,21 @@
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers"
+>
+    <f:layout name="DefaultLayout" />
+    <f:section name="Content">
+        <div id="content" class="card card-block">
+            <div class="row vertical-divider">
+                <div class="col-md-8">
+                    <h1 class="title">{data.title}</h1>
+                    <f:if condition="{data.subtitle}">
+                         <h2 class="subtitle">{data.subtitle}</h2>
+                    </f:if>
+                    <f:format.raw>{content_main}</f:format.raw>
+                </div>
+                <div class="col-md-4">
+                    <f:format.raw>{content_sidebar}</f:format.raw>
+                </div>
+            </div>
+            <div class="clearer"></div>
+        </div>
+    </f:section>
+</html>
