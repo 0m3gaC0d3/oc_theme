@@ -3,9 +3,9 @@
   "authors": [
     "Wolf Utz <wpu@hotmail.de>"
   ],
-  "description": "some desc",
+  "description": "",
   "main": "bower.json",
-  "license": "MIT",
+  "license": "GPL-3.0+",
   "homepage": "",
   "private": true,
   "ignore": [

@@ -1,5 +1,5 @@
 <?php
-$EM_CONF[$_EXTKEY] = array(
+$EM_CONF[$_EXTKEY] = [
 	'title' => 'Theme',
 	'description' => '',
 	'category' => 'distribution',
@@ -9,15 +9,13 @@ $EM_CONF[$_EXTKEY] = array(
 	'uploadfolder' => false,
 	'createDirs' => '',
 	'clearCacheOnLoad' => true,
-	'version' => '1.0.0',
-	'constraints' => array(
-		'depends' => array(
+	'version' => '1.0.1',
+	'constraints' => [
+		'depends' => [
 			'typo3' => '8.7.0-8.7.99',
             'vhs' => '4.2.0-4.2.99',
-		),
-		'conflicts' => array(
-		),
-		'suggests' => array(
-		),
-	),
-);
+		],
+		'conflicts' => [],
+		'suggests' => [],
+	],
+];

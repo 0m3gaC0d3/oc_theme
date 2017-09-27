@@ -3,7 +3,7 @@
 	"type": "typo3-cms-extension",
 	"description": "",
 	"homepage": "https://bitbucket.org/omegac0de/oc_theme",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"license": "GPL-3.0+",
 	"keywords": [
 		"TYPO3",
