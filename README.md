@@ -1,4 +1,4 @@
-# Base Theme - Extension for TYPO 3 V 7.6 #
+# Base Theme - Extension for TYPO 3 V 8.7 #
 
 This Extension adds a base theme for a fresh TYPO3 instance.
 

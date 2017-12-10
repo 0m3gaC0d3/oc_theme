@@ -1,7 +1,7 @@
 {
 	"name": "omegacode/typo3-theme",
 	"type": "typo3-cms-extension",
-	"description": "",
+	"description": "This extension provides a theme for a TYPO3 instance.",
 	"homepage": "https://bitbucket.org/omegac0de/oc_theme",
 	"license": "GPL-3.0+",
 	"keywords": [
@@ -17,7 +17,7 @@
 	},
 	"require": {
 		"typo3/cms-core": ">=8.7.0,<8.7.99",
-		"fluidtypo3/vhs": ">=4.2.0,<4.2.99"
+		"fluidtypo3/vhs": ">=4.2.0,<4.3.99"
 	},
 	"require-dev": {
 		"phpunit/phpunit": "~4.8.0"
