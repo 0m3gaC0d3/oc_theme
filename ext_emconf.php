@@ -32,8 +32,8 @@ $EM_CONF[$_EXTKEY] = [
     'category' => 'distribution',
     'constraints' => [
         'depends' => [
-            'typo3' => '8.7.0-8.7.999',
-            'vhs' => '4.2.0-4.3.99',
+            'typo3' => '7.6.0-8.7.99',
+            'vhs' => '3.0.0-4.3.99',
         ],
         'conflicts' => [],
         'suggests' => [],
