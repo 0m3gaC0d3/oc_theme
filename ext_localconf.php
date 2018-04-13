@@ -36,10 +36,10 @@ $signalSlotDispatcher->connect(
     'createBackendLayouts'
 );
 
-// hook is called after caching (for modification of pages with COA_/USER_INT objects)
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output'][] = 
-        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcOutput';
-
-// hook is called before caching (for modification of pages on their way in the cache)
-$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-all'][] = 
-        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcAll';
+//// hook is called after caching (for modification of pages with COA_/USER_INT objects)
+//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output'][] =
+//        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcOutput';
+//
+//// hook is called before caching (for modification of pages on their way in the cache)
+//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-all'][] =
+//        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcAll';

@@ -21,15 +21,15 @@ page.10 {
     layoutRootPath = EXT:oc_theme/Resources/Private/Layouts/
     variables {
         content_header < styles.content.get
-        content_header.select.where = colPos = 0
+        content_header.select.where = colPos = 1
         content_header.slide = -1
         content_main < styles.content.get
-        content_main.select.where = colPos = 1
+        content_main.select.where = colPos = 0
         content_footer < styles.content.get
-        content_footer.select.where = colPos = 3
+        content_footer.select.where = colPos = 2
         content_footer.slide = -1
         content_sidebar < styles.content.get
-        content_sidebar.select.where = colPos = 4
+        content_sidebar.select.where = colPos = 3
     }
 }
 # Configurations.

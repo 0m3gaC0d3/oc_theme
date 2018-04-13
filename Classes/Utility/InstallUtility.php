@@ -57,7 +57,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Header
-					colPos = 0
+					colPos = 1
 				}
 			}
 		}
@@ -65,7 +65,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Content
-					colPos = 1
+					colPos = 0
 				}
 			}
 		}
@@ -99,7 +99,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Header
-					colPos = 0
+					colPos = 1
 				}
 			}
 		}
@@ -107,7 +107,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Content
-					colPos = 1
+					colPos = 0
 				}
 			}
 		}
@@ -141,7 +141,7 @@ backend_layout {
 			columns {
 				1 {
 					name = Header
-					colPos = 0
+					colPos = 1
 				}
 			}
 		}
@@ -149,11 +149,11 @@ backend_layout {
 			columns {
 				1 {
 					name = Content
-					colPos = 1
+					colPos = 0
 				}
 				2 {
 					name = Sidebar
-					colPos = 4
+					colPos = 3
 				}
 			}
 		}

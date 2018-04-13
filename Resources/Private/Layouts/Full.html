@@ -1,5 +1,5 @@
 {namespace a=OmegaCode\OcTheme\ViewHelpers}
-<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers">
+<html xmlns:f="http://typo3.org/ns/TYPO3/CMS/Fluid/ViewHelpers" data-namespace-typo3-fluid="true">
     <f:render partial="Head" arguments="{_all}"/>
     <div id="page-{data.uid}" class="page container-fluid layout-{data.layout} {f:if(condition:'{a:page.isNew(newUntil: data.newUntil)}', then: 'new')}">
         <f:comment><!-- Header --></f:comment>
