@@ -28,7 +28,7 @@
 $EM_CONF[$_EXTKEY] = [
     'title' => 'Page Theme',
     'description' => 'This extension provides a theme for a TYPO3 instance.',
-    'version' => '3.0.0',
+    'version' => '3.1.0',
     'category' => 'distribution',
     'constraints' => [
         'depends' => [
