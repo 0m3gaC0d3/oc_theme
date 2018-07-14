@@ -1,6 +1,6 @@
 theme.tx_oc_theme {
-	settings {
-		# cat=theme.tx_oc_theme//a; type=boolean; label=Hide Fluid errors
-		contentObjectExceptionHandler = 0
-	}
+    settings {
+        # cat=theme.tx_oc_theme//a; type=boolean; label=Hide Fluid errors
+        contentObjectExceptionHandler = 0
+    }
 }

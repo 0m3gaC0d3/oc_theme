@@ -1,14 +1,15 @@
 <?php
 /***************************************************************
- *
  *  Copyright notice
  *
- *  (c) 2017 Wolf Utz <wpu@hotmail.de>
+ *  (c) 2018 Wolf Utz <utz@riconet.de>, riconet
+ *      Created on: 14.07.18 21:30
  *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
  *  free software; you can redistribute it and/or modify
+ *
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 3 of the License, or
  *  (at your option) any later version.
@@ -27,12 +28,13 @@
 if (!defined('TYPO3_MODE')) {
     die('Access denied.');
 }
-
-/**
- * Add default TypoScript.
- */
-\TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
-    'oc_theme',
-    'Configuration/TypoScript',
-    'Base theme'
+call_user_func(
+    function ($extensionKey) {
+        \TYPO3\CMS\Core\Utility\ExtensionManagementUtility::addStaticFile(
+            $extensionKey,
+            'Configuration/TypoScript',
+            'Theme'
+        );
+    },
+    $_EXTKEY
 );

@@ -2,12 +2,14 @@
 /***************************************************************
  *  Copyright notice
  *
- *  (c) 2017 Wolf Utz <wpu@hotmail.de>, OmegaCode
+ *  (c) 2018 Wolf Utz <utz@riconet.de>, riconet
+ *      Created on: 14.07.18 21:17
  *
  *  All rights reserved
  *
  *  This script is part of the TYPO3 project. The TYPO3 project is
  *  free software; you can redistribute it and/or modify
+ *
  *  it under the terms of the GNU General Public License as published by
  *  the Free Software Foundation; either version 3 of the License, or
  *  (at your option) any later version.
@@ -24,22 +26,19 @@
  ***************************************************************/
 
 if (!defined('TYPO3_MODE')) {
-	die('Access denied.');
+    die('Access denied.');
 }
 
-/** @var \TYPO3\CMS\Extbase\SignalSlot\Dispatcher $signalSlotDispatcher */
-$signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
-$signalSlotDispatcher->connect(
-    \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
-    'afterExtensionInstall',
-    \OmegaCode\OcTheme\Utility\InstallUtility::class,
-    'createBackendLayouts'
+call_user_func(
+    function ($extensionKey) {
+        /** @var \TYPO3\CMS\Extbase\SignalSlot\Dispatcher $signalSlotDispatcher */
+        $signalSlotDispatcher = \TYPO3\CMS\Core\Utility\GeneralUtility::makeInstance(\TYPO3\CMS\Extbase\SignalSlot\Dispatcher::class);
+        $signalSlotDispatcher->connect(
+            \TYPO3\CMS\Extensionmanager\Utility\InstallUtility::class,
+            'afterExtensionInstall',
+            \OmegaCode\OcTheme\Utility\InstallUtility::class,
+            'createBackendLayouts'
+        );
+    },
+    $_EXTKEY
 );
-
-//// hook is called after caching (for modification of pages with COA_/USER_INT objects)
-//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-output'][] =
-//        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcOutput';
-//
-//// hook is called before caching (for modification of pages on their way in the cache)
-//$GLOBALS['TYPO3_CONF_VARS']['SC_OPTIONS']['tslib/class.tslib_fe.php']['contentPostProc-all'][] =
-//        'OmegaCode\\OcTheme\\Hook\\CleanSourceHook->contentPostProcAll';

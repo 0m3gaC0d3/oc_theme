@@ -1,2 +1,4 @@
 /Resources/Public/Vendor
 /vendor/
+composer.lock
+/yarn.lock
