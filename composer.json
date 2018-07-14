@@ -24,7 +24,7 @@
 	},
 	"extra": {
 		"typo3/cms": {
-			"extension-key": "my_ext_key"
+			"extension-key": "oc_theme"
 		}
 	},
 	"authors": [
