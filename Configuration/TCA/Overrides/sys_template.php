@@ -36,5 +36,5 @@ call_user_func(
             'Theme'
         );
     },
-    $_EXTKEY
+    "oc_theme"
 );
