@@ -2,11 +2,11 @@
 	"name": "omegacode/typo3-theme",
 	"type": "typo3-cms-extension",
 	"description": "This extension provides a theme for a TYPO3 instance.",
-	"homepage": "https://bitbucket.org/omegac0de/oc_theme",
+	"homepage": "https://github.com/0m3gaC0d3/oc_theme",
 	"license": ["GPL-3.0+"],
 	"keywords": [
 		"TYPO3",
-		"CMS",
+		"Extension",
 		"theme"
 	],
 	"require": {
@@ -17,10 +17,6 @@
 		"psr-4": {
 			"OmegaCode\\OcTheme\\": "Classes/"
 		}
-	},
-	"replace": {
-		"oc_theme": "self.version",
-		"typo3-ter/oc-theme": "self.version"
 	},
 	"extra": {
 		"typo3/cms": {

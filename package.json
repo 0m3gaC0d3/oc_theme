@@ -1,7 +1,7 @@
 {
     "dependencies": {
-        "jquery": "3.3.*",
-        "bootstrap": "3.3.*",
+        "jquery": "^3.3.*",
+        "bootstrap": "^3.3.*",
         "font-awesome": "^4.7.*",
         "@fancyapps/fancybox": "^3.3.*"
     }
